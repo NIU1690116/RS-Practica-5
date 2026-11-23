@@ -55,11 +55,15 @@ def llistar_tasques():
 
 
 def construir_parser():
-    parser = argparse.ArgumentParser(description="Gestor de tasques acadèmiques.")
+    parser = argparse.ArgumentParser(
+        description="Gestor de tasques acadèmiques."
+    )
     comandaments = parser.add_subparsers(dest="comandament", required=True)
 
     afegir = comandaments.add_parser("add", help="Afegeix una tasca nova")
-    afegir.add_argument("--title", dest="titol", required=True, help="Títol de la tasca")
+    afegir.add_argument(
+        "--title", dest="titol", required=True, help="Títol de la tasca"
+    )
     afegir.add_argument(
         "--subject",
         dest="assignatura",

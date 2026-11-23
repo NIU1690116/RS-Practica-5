@@ -11,7 +11,9 @@ SCRIPT = ARREL / "src" / "tasks_app.py"
 def preparar_fitxer(tmp_path, registres):
     fitxer = tmp_path / "data" / "tasks.json"
     fitxer.parent.mkdir(parents=True, exist_ok=True)
-    fitxer.write_text(json.dumps(registres, ensure_ascii=False), encoding="utf-8")
+    fitxer.write_text(
+        json.dumps(registres, ensure_ascii=False), encoding="utf-8"
+    )
     return fitxer
 
 
